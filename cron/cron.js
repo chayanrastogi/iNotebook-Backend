@@ -1,5 +1,5 @@
-import cron from "cron";
-import https from "https";
+const cron = require("cron");
+const https = require("https");
 
 const URL = "https://inotebook-backend-kr4e.onrender.com";
 
@@ -17,7 +17,7 @@ const job = new cron.CronJob("*/14 * * * *", function () {
 		});
 });
 
-export default job;
+module.exports = job;
 
 // CRON JOB EXPLANATION:
 // Cron jobs are scheduled tasks that run periodically at fixed intervals or specific times
