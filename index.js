@@ -4,7 +4,6 @@ var cors = require('cors')
 const job = require('./cron/cron');
 
 connectToMongo();
-job.start();
 const app = express()
 const port = process.env.PORT || 5000 
  
